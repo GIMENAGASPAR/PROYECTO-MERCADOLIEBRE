@@ -1,11 +1,17 @@
 {
+  "name": "ejercitacion-c17",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
     "fs": "^0.0.1-security",
     "path": "^0.12.7"
-  },
-  "scripts": {
-    "test": "nodemon src/app.js",
-    "start": "node src/app.js"
   }
 }
