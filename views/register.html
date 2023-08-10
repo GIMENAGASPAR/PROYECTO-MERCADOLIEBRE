@@ -3,52 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/register.css">
     <title>REGISTRO</title>
 </head>
 <body>
-    <form action="/register" method="post">
-        <label for="nombre-apellido">Nombre y Apellido</label>
-        <input type="text" name="nombre-apellido" id="nombre-apellido">
+    <header>
+        <section class="barrasup">
 
-        <label for="nombre-usuario">Nombre de Usuario</label>
-        <input type="text" name="nombre-usuario" id="nombre-usuario">
+            <section class="contendorSuperior">
+                <figure class="logo"><img src="images/logo-mercado-liebre.svg" alt="logo"></figure>
 
-        <label for="fecha-nacimiento">Fecha de Nacimiento</label>
-        <input type="date" name="fecha-nacimiento" id="fecha-nacimiento">
+                <section class="barraBusqueda">
+                <input type="search" class="est-barraBusqueda" placeholder=" buscar" />
+                <button type="submit" class="botonbuscar"><i class="boton-barrabusqueda fa fa-search"></i></button>
+                </section>                
+            </section>
 
-        <label for="domicilio">Domicilio</label>
-        <input type="text" name="domicilio" id="domicilio">
+            <section class="compracuota">
+                <h2 class="compra-cuotas"><i class="fas fa-hand-holding-usd" style="color: #000000;"></i>Comprá en cuotas y sin tarjeta de crédito</h2>
+            </section>
+
+        </section>
+        <nav class="barranavegacion">
+            <ul class="navbar-izq">
+                <li class="op">Ofertas</li>
+                <li class="op">Tiendas Oficiales</li>
+                <li class="op">Vender</li>
+                <li class="op">Ayuda</li>
+            </ul>
+            <ul class="navbar-der">
+                <li class="op"><a href="/register" class="links-navbar">Creá tu cuenta <i class="fas fa-id-card" style="color: #000000;"></i></a></li>
+                <li class="op"><a href="/login" class="links-navbar">Ingresá <i class="fas fa-sign-in-alt" style="color: #000000;"></i></a></li>
+                <li class="op">Mis compras <i class="fas fa-shopping-basket" style="color: #000000;"></i></li>
+            </ul>
+        </nav>
+
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+    <main>
+        <form action="/register" method="post" class="form-cp">
+            <input type="text" name="nombre-apellido" id="nombre-apellido" placeholder="Nombre y Apellido" class="form-ci">
+        <br>
+            <input type="text" name="nombre-usuario" id="nombre-usuario" placeholder="Nombre de Usuario" class="form-ci">
+        <br>
+            <input type="date" name="fecha-nacimiento" id="fecha-nacimiento" placeholder="Fecha de Nacimiento" class="form-ci">
+
+            <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio" class="form-ci">
         
-        <h2>CATEGORIA DE USUARIO</h2>
-        <label for="comprar-vender">Comprador</label>
-        <input type="radio" name="comprar-vender" id="comprar-vender">
-        <label for="comprar-vender">Vendedor</label>
-        <input type="radio" name="comprar-vender" id="comprar-vender">
+        <p class="tit">PEFIL DE USUARIO</p>
+        <section class="cat-usuario">
+            <label for="c-v">Comprador</label>
+            <input type="radio" name="c-v" id="comprar">
+            <label for="vender">Vendedor</label>
+            <input type="radio" name="c-v" id="vender">
+        </section>
 
-        <h2>CATEGORIA DE INTERES</h2>
-        <label for="categoria-interes">ELECTRO</label>
-        <input type="checkbox" name="categoria-interes" value="electro">
-        <label for="categoria-interes">MODA</label>
-        <input type="checkbox" name="categoria-interes" value="moda">
-        <label for="categoria-interes">HOGAR</label>
-        <input type="checkbox" name="categoria-interes" value="hogar">
-        <label for="categoria-interes">JUGUETERIA</label>
-        <input type="checkbox" name="categoria-interes" value="jugeteria">
-        <label for="categoria-interes">VIDA SANA</label>
-        <input type="checkbox" name="categoria-interes" value="vida-sana">
+        <p class="tit">CATEGORIA DE INTERES</p>
+        <section class="cat-interes">
 
-        <label for="foto-perfil">SELECCIONAR FOTO DE PERFIL</label>
-        <input type="file" name="foto-perfil" id="foto-perfil" accept=".jpg, .png">
+            <section class="cat-interes-items">
+                <input type="checkbox" name="categoria-interes" value="electro" class="">
+                <label for="categoria-interes">ELECTRO</label>
+            </section>
+            <section class="cat-interes-items">
+                <input type="checkbox" name="categoria-interes" value="moda">
+                <label for="categoria-interes">MODA</label>
+            </section>
+            <section class="cat-interes-items">
+                <input type="checkbox" name="categoria-interes" value="hogar">
+                <label for="categoria-interes">HOGAR</label>
+            </section>
+            <section class="cat-interes-items">
+                <input type="checkbox" name="categoria-interes" value="jugeteria">
+                <label for="categoria-interes">JUGUETERIA</label>
+            </section>
+            <section class="cat-interes-items">
+                <input type="checkbox" name="categoria-interes" value="vida-sana">
+                <label for="categoria-interes">VIDA SANA</label>
+            </section>
 
-        <label for="contraseña">Contraseña</label>
-        <input type="password" name="contraseña" id="contraseña">
+        </section>
+        
+        
+        <label for="foto-perfil"><p class="tit">SELECCIONAR FOTO DE PERFIL</p></label>
+        <input type="file" name="foto-perfil" id="foto-perfil" accept=".jpg, .png" class="subir-foto">
 
-        <label for="conf-contraseña">Confirmar Contraseña</label>
-        <input type="password" name="conf-contraseña" id="conf-contraseña">
-
-        <button type="submit">ENVIAR FORMULARIO</button>
-        <button type="reset">BORRAR</button>
+            <input type="password" name="contraseña" id="contraseña"placeholder="Contraseña" class="form-ci">
+            <input type="password" name="conf-contraseña" id="conf-contraseña" placeholder="Confirmar Contraseña" class="form-ci">
+        <section class="botones-cp">
+            <button type="submit" class="boton-enviarform">ENVIAR FORMULARIO</button>
+            <button type="reset" class="boton-eliminar">BORRAR</button>
+        </section>
+        
     </form>
+    </main>
+    <footer>
+        <section class="footer">
+            <section class="pie">
+                <i class="icono fas fa-credit-card"></i>
+                <h2>Pagá con tarjeta o en efectivo</h2>
+                <p>Con Merc Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
+            </section>
+            <section class="pie">
+                <i class="icono fas fa-gift"></i>
+                <h2>Envío gratis desde $ 2.500</h2>
+                <p>Solo por estar registrad@ en Merc tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos.</p>
+            </section>
+            <section class="pie">
+                <i class="icono fas fa-user-shield"></i>
+                <h2>Seguridad, de principio a fin</h2>
+                <p>¿No te gusta? ¡Devolvelo! En Merc, no hay nada que no puedas hacer, porque estás siempre protegid@.</p>
+            </section>
+        </section>
+        
+        <section>
+            <h6 style="color: #666; margin: 10px;">Copyright © 1999-2020 Mer S.R.L.</h3>
+        </section>
+    </footer>
 
 </body>
 </html>

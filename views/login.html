@@ -3,17 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/login.css">
     <title>INICIAR SESION</title>
 </head>
 <body>
-    <label for="nombre-de-usuario" >Nombre de usuario</label>
-    <input type="text" name="nombre-de-usuario" id="nombre-de-usuario" placeholder="Ingrese su nombre de usuario"><br>
-    <h4>Ingrese su contraseña</h4>
-    <label for="password">
-        <input type="password" name="password" id="password" placeholder="Ingrese su contraseña">
-    </label><br>
+    <header>
+        <section class="barrasup">
 
-    <button type="submit">Enviar formulario</button>
+            <section class="contendorSuperior">
+                <figure class="logo"><img src="images/logo-mercado-liebre.svg" alt="logo"></figure>
+
+                <section class="barraBusqueda">
+                <input type="search" class="est-barraBusqueda" placeholder=" buscar" />
+                <button type="submit" class="botonbuscar"><i class="boton-barrabusqueda fa fa-search"></i></button>
+                </section>                
+            </section>
+
+            <section class="compracuota">
+                <h2 class="compra-cuotas"><i class="fas fa-hand-holding-usd" style="color: #000000;"></i>Comprá en cuotas y sin tarjeta de crédito</h2>
+            </section>
+
+        </section>
+        <nav class="barranavegacion">
+            <ul class="navbar-izq">
+                <li class="op">Ofertas</li>
+                <li class="op">Tiendas Oficiales</li>
+                <li class="op">Vender</li>
+                <li class="op">Ayuda</li>
+            </ul>
+            <ul class="navbar-der">
+                <li class="op"><a href="/register" class="links-navbar">Creá tu cuenta <i class="fas fa-id-card" style="color: #000000;"></i></a></li>
+                <li class="op"><a href="/login" class="links-navbar">Ingresá <i class="fas fa-sign-in-alt" style="color: #000000;"></i></a></li>
+                <li class="op">Mis compras <i class="fas fa-shopping-basket" style="color: #000000;"></i></li>
+            </ul>
+        </nav>
+
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+    <main>
+        <form action="/login" method="post" class="form-cp">
+            <input type="text" name="nombre-de-usuario" id="nombre-de-usuario" placeholder="Nombre de Usuario" class="form-ci">
+            <input type="password" name="password" id="password" placeholder="Contraseña" class="form-ci">
+            <button type="submit" class="boton-enviarform">INGRESAR</button>
+        </form>
+
+    </main>
+    <footer>
+        <section class="footer">
+            <section class="pie">
+                <i class="icono fas fa-credit-card"></i>
+                <h2>Pagá con tarjeta o en efectivo</h2>
+                <p>Con Merc Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
+            </section>
+            <section class="pie">
+                <i class="icono fas fa-gift"></i>
+                <h2>Envío gratis desde $ 2.500</h2>
+                <p>Solo por estar registrad@ en Merc tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos.</p>
+            </section>
+            <section class="pie">
+                <i class="icono fas fa-user-shield"></i>
+                <h2>Seguridad, de principio a fin</h2>
+                <p>¿No te gusta? ¡Devolvelo! En Merc, no hay nada que no puedas hacer, porque estás siempre protegid@.</p>
+            </section>
+        </section>
+        
+        <section>
+            <h6 style="color: #666; margin: 10px;">Copyright © 1999-2020 Mer S.R.L.</h3>
+        </section>
+    </footer>
 
 </body>
 </html>

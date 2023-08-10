@@ -1,11 +1,15 @@
-html,
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background-color:#ebebeb;
-  box-sizing: border-box;
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
+main{
+    background-color: #ebebeb;
+}
+
 /*HEADER*/
+.barrasup{
+    align-items: center;
+}
 .contendorSuperior{
     display: flex;
     flex-grow: 8;
@@ -46,6 +50,11 @@ body {
     top: 10px;
 
 }
+.compracuota{
+    display: block;
+    flex-grow: 2;
+    margin: 17px 0px;
+}
 .compra-cuotas{
     font-size: 12px;
     text-align: center;
@@ -56,10 +65,6 @@ header {
     padding: 24px;
 }
 
-.p{
-    font-size: 12px;
-    margin: 0px 8px;
-}
 .burger-menu{
     background-color: #1259c3;
     width: 45px;
@@ -81,119 +86,66 @@ header {
     text-decoration: none;
     color: black;
 }
-.compracuota{
-    display: block;
-    flex-grow: 2;
-    margin: 17px 0px;
-}
-.barrasup{
-    align-items: center;
-}
 
 /*MAIN*/
-main{
-    width: 90%;
-    background-color: #ebebeb;
-    text-align: center;
-    margin: auto;
-    margin-top: 10px;
+/*CAJA PADRE FORMULARIO*/
+.form-cp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px;
 }
-.titulares{
-    font-size: 24px;
-    color: #666;
-    text-align: left;
-    margin: 15px;
-
-}
-.precios{
-    font-weight: bold;
-    font-size: 18px;
-    flex-grow: 0.30;
-}
-.descuentos{
-    color:#39b54a;
-    font-size: 16px;
-    flex-grow: 0.70;
-}
-.descripciones{
-    font-size: 16px;
-    padding: 10px;
-    text-align: left;
-}
-
-.articulo{
-    margin-bottom: 10px;
-    text-align: center;
+/*ITEMS DE CAJA PADRE*/
+.form-ci{
     margin: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 85%;
+    height: 26px;
+    padding: 10px;
 }
-.ultima-visita{
+.cat-usuario{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    width: 350px;
+    margin: 8px;
 }
-.ofertas{
+.cat-interes{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+    margin: 15px;
 }
-.desarticulo{
-    border-top: solid 1px #ebebeb;
-    padding: 15px;
-    background-color: #ffffff;
-    position: relative;
-    width: 100%;
-    text-align: left;
-}
-.articulo > .desarticulo{
-    display: none;
-}
-.articulo:hover{
-    .desarticulo{
-        display: block;
-    }
-    box-shadow: 5px 5px 35px;
-}
-
-
-*{
-    margin: 0px;
-    padding: 0px;    
-    box-sizing: border-box;
-}
-
-
-.desarticulo > .delivery{
-    display: block;
-    font-size: 16px;
+.cat-interes-items{
     padding: 5px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #39b54a;
-    background-color: #FFF;
-    border-radius: 50%;
-    position: absolute;
-    right: 20px;
-    top: -15px;
 }
-.cajaPrecio-Descuento{
+.tit{
+    font-size: 20px;
+    margin: 30px 0px 0px;
+    font-weight: bold;
+}
+.subir-foto{
+    margin: 5px;
+}
+.botones-cp{
     display: flex;
 }
-@keyframes rotar{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
+.boton-enviarform{
+    border-radius: 5px;
+    margin: 10px;
+    border: none;
+    background-color: #eac926;
+    padding: 10px;
+    font-weight: bolder;
 }
-.articulo:hover .delivery{
-    animation-name: rotar;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-out;
+.boton-eliminar{
+    border-radius: 5px;
+    margin: 10px;
+    border: none;
+    background-color:#f35252;
+    padding: 10px;
+    font-weight: bolder;
 }
-
 /*FOOTER*/
 footer{
     margin-top: 40px;
@@ -214,7 +166,10 @@ footer{
     color: #1259c3;
 }
 
-/*MEDIAS*/
+
+
+
+
 @media(min-width:530px){
     .barranavegacion{
         display: block;
@@ -239,15 +194,6 @@ footer{
 /*NAVEGACION EN TABLET*/
 
 @media(min-width:448px){
-    .desarticulo{
-        display: block;
-    }
-    .articulo{
-        display: flex;
-        flex-wrap: wrap;
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-        width: 43%;
-    }
     .barranavegacion{
         display: flex;
         justify-content: space-between;
@@ -275,17 +221,11 @@ footer{
     .est-barraBusqueda{
         flex-grow: 0.33;
     }
+    
 }
 
 /*NAVEGACION EN DESKTOP*/
 @media(min-width:769px){
-    .desarticulo{
-        display: block;
-    }
-    .articulo{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-        width: 22%;
-    }
     .barranavegacion{
         display: block;
         display: flex;
@@ -324,5 +264,13 @@ footer{
     }
     .pie{
         margin: 10px;
+    }
+    .form-ci{
+        margin: 10px;
+        border: none;
+        border-radius: 5px;
+        width: 45%;
+        height: 26px;
+        padding: 10px;
     }
 }
