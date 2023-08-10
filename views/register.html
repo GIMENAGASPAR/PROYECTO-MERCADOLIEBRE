@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRO</title>
+</head>
+<body>
+    <form action="/register" method="post">
+        <label for="nombre-apellido">Nombre y Apellido</label>
+        <input type="text" name="nombre-apellido" id="nombre-apellido">
+
+        <label for="nombre-usuario">Nombre de Usuario</label>
+        <input type="text" name="nombre-usuario" id="nombre-usuario">
+
+        <label for="fecha-nacimiento">Fecha de Nacimiento</label>
+        <input type="date" name="fecha-nacimiento" id="fecha-nacimiento">
+
+        <label for="domicilio">Domicilio</label>
+        <input type="text" name="domicilio" id="domicilio">
+        
+        <h2>CATEGORIA DE USUARIO</h2>
+        <label for="comprar-vender">Comprador</label>
+        <input type="radio" name="comprar-vender" id="comprar-vender">
+        <label for="comprar-vender">Vendedor</label>
+        <input type="radio" name="comprar-vender" id="comprar-vender">
+
+        <h2>CATEGORIA DE INTERES</h2>
+        <label for="categoria-interes">ELECTRO</label>
+        <input type="checkbox" name="categoria-interes" value="electro">
+        <label for="categoria-interes">MODA</label>
+        <input type="checkbox" name="categoria-interes" value="moda">
+        <label for="categoria-interes">HOGAR</label>
+        <input type="checkbox" name="categoria-interes" value="hogar">
+        <label for="categoria-interes">JUGUETERIA</label>
+        <input type="checkbox" name="categoria-interes" value="jugeteria">
+        <label for="categoria-interes">VIDA SANA</label>
+        <input type="checkbox" name="categoria-interes" value="vida-sana">
+
+        <label for="foto-perfil">SELECCIONAR FOTO DE PERFIL</label>
+        <input type="file" name="foto-perfil" id="foto-perfil" accept=".jpg, .png">
+
+        <label for="contraseña">Contraseña</label>
+        <input type="password" name="contraseña" id="contraseña">
+
+        <label for="conf-contraseña">Confirmar Contraseña</label>
+        <input type="password" name="conf-contraseña" id="conf-contraseña">
+
+        <button type="submit">ENVIAR FORMULARIO</button>
+        <button type="reset">BORRAR</button>
+    </form>
+
+</body>
+</html>
